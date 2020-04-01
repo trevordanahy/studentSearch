@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Student Search</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div id = "serviceDropdown">
+    <label for="serviceSelector"> Select a Service</label>
+
+    <select id="serviceSelector" onchange ="serviceSelect()">
+      <option hidden disabled selected value> -- select an option -- </option>
+      <option value="Occupational Therapy Services">Occupational Therapy Services</option>
+      <option value="Physical Therapy">Physical Services</option>
+      <option value="Speech-language therapy">Speech-language Therapy</option>
+      <option value="Vision Services">Vision Services</option>
+    </select>
+  </div>
+
+  <div>
+    <table id="studentTableAll" style="width:75%">
+      <tr><th>Student id</th> <th>Student Name Last</th> <th>Student Name first</th> <th>Services</th> </tr>
+
+     <tr><td>1502032</td><td> Mike </td><td> Trevor</td><td class="services">Occupational Therapy Services: Physical Therapy</td></tr>
+     <tr><td>1510278</td><td> Mike </td><td> Trevor</td><td class="services">Physical Therapy</td></tr>
+     <tr><td>1525155</td><td> Mike </td><td> Trevor</td><td class="services">Occupational Therapy Services</td></tr>
+     <tr><td>1355622</td><td> Mike </td><td> Trevor</td><td class="services">Vision Services </td></tr>
+     <tr><td>1520487</td><td> Mike </td><td> Trevor</td><td class="services">Physical Therapy: Speech-language therapy</td></tr>
+     <tr><td>1520488</td><td> Mike </td><td> Trevor</td><td class="services">Vision Services</td></tr>
+     <tr><td>1347290</td><td> Mike </td><td> Trevor</td><td class="services">Physical Therapy</td></tr>
+     <tr><td>1505629</td><td> Mike </td><td> Trevor</td><td class="services">Occupational Therapy Services</td></tr>
+     <tr><td>1475257</td><td> Mike </td><td> Trevor</td><td class="services">Occupational Therapy Services</td></tr>
+     <tr><td>1527617</td><td> Mike </td><td> Trevor</td><td class="services">Vision Services</td></tr>
+     <tr><td>1526802</td><td> Mike </td><td> Trevor</td><td class="services">Vision Services</td></tr>
+     <tr><td>1471258</td><td> Mike </td><td> Trevor</td><td class="services">Physical Therapy</td></tr>
+     <tr><td>1515321</td><td> Mike </td><td> Trevor</td><td class="services">Speech-language therapy</td></tr>
+     <tr><td>1462356</td><td> Mike </td><td> Trevor</td><td class="services">Speech-language therapy</td></tr>
+     <tr><td>1485613</td><td> Mike </td><td> Trevor</td><td class="services">Speech-language therapy</td></tr>
+     <tr><td>1485614</td><td> Mike </td><td> Trevor</td><td class="services">Speech-language therapy:</td></tr>
+
+    </table>
+  </div>
+
+  <div>
+    <table id="studentTableFiltered" style="width:75%">
+      <thead>
+        <tr><th>Student id</th> <th>Student Name Last</th> <th>Student Name first</th> <th>Services</th> </tr>
+      </thead>
+      <tbody id="filteredBody">
+      </tbody>
+    </table>
+  </div>
+
+</body>
+
+
+
+
+
+<script src="studentSearch.js"></script>
