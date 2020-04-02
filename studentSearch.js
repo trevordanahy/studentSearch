@@ -1,27 +1,20 @@
 
 var rows = document.getElementById('studentTableAll').getElementsByTagName('tr');
-var studentTableAll = document.getElementById('studentTableAll');
-var studentTableFiltered = document.getElementById('studentTableFiltered');
-
-
 
 function serviceSelect () {
   var serviceSelected = document.getElementById('serviceSelector').value;
-
-  document.getElementById('filteredBody').innerHTML = '';
-//Clean filtered table from previous
-
-
-
-//Add corresponding rows to
+//Change the class of all rows in the table to hidden 
   for (i=0; i < rows.length; i++){
-    var currentRow = rows[i]
-    if (currentRow.children[3].innerHTML.includes(serviceSelected)){
-      studentTableFiltered.getElementsByTagName('tbody')[0].appendChild(currentRow);
-  };
+    var currentRow = rows[i];
+    currentRow.removeAttribute("class");
+
+    if (serviceSelected == "Show All") {
+      currentRow.classList.add("shown");
+    } else if (currentRow.children[3].innerHTML.includes(serviceSelected)){
+      currentRow.classList.add("shown");
+    } else {
+      currentRow.classList.add("hidden");
+    }
   };
 
-  //Hide studentTableAll
-console.log(serviceSelected);
-  //Show studentTableFiltered after adding new rows
-}
+
